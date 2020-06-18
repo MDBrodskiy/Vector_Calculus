@@ -1,4 +1,4 @@
-# LaTeX Type-Setting
+# Vector Calculus
 An assortment of lecture notes and the final project from DVC's Math-292 (Summer 2020)
 <br/> <br/> 
 Open sourced **LaTeX** Templates [here](https://www.latextemplates.com/).
