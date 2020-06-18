@@ -1,0 +1,155 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture II Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Dot Product $-$ 12.3}
+
+A dot product is written using ``$\cdot$,'' or $\vec{a} \cdot \vec{b}$. This is pronounced ``a dot b.''\\
+
+A dot product can be found by multiplying each respective term with the other term, and adding each product together, or $\vec{a} \cdot \vec{b} \longrightarrow a_1b_1+a_2b_2+a_3b_3$\\
+
+\begin{flushleft}
+
+  \textit{Practice Problem:} Given  $\vec{a} = <3, 4, 5>, \vec{b} = <2, 7, -1>$, find $\vec{a}\cdot\vec{b}$
+
+\end{flushleft}
+
+$$(3)(2) + (4)(7) + (-1)(5) = 27$$
+
+\subsection{Dot Product Properties}
+
+\begin{enumerate}
+
+  \item $\vec{a}\cdot\vec{a}=|a|^2$
+
+  \item $\vec{a}\cdot(\vec{b}+\vec{c}) = \vec{a}\cdot\vec{b}+\vec{a}\cdot\vec{c}$
+
+  \item $\text{If } \vec{b} \text{ equals } <0, 0, 0>, \vec{a}\cdot\vec{b}=0$
+
+  \item $\vec{a}\cdot\vec{b}=\vec{b}\cdot\vec{a}$
+
+  \item $\text{If \textit{c} is a scalar, } (c\vec{a})\vec{b}=c(\vec{a}\cdot\vec{b})$
+
+  \item If the angle between two vectors is known, $\vec{a}\cdot\vec{b}=|\vec{a}||\vec{b}|cos(\theta)$\footnote{Vectors $\vec{a} \text{ and } \vec{b} \text{ are orthogonal (perpendicular) if and only if }\vec{a}\cdot\vec{b}=0$}
+
+    \begin{enumerate}
+
+      \item $cos(\theta)=\frac{\vec{a}\cdot\vec{b}}{|\vec{a}||\vec{b}|}$
+
+    \end{enumerate}
+
+  \item The angle between a certain axis and a vector is equal to the dot product of the vector and the respective unit vector of the axis, divided by the magnitude of the vector. For the $x$ axis, this would be: $cos(\theta_x)=\frac{\vec{a}\cdot i}{|\vec{a}|}$
+
+    \begin{enumerate}
+
+      \item $cos^2(\theta_x) + cos^2(\theta_y) + cos^2(\theta_z) = 1$
+
+    \end{enumerate}
+
+  \item The component of projection of one vector upon another is given by: $Comp_{\vec{a}\vec{b}} = \frac{\vec{a}\cdot\vec{b}}{|\vec{b}|}$\footnote{Order matters! If it is the projection of $\vec{b} \text{ onto } \vec{a}$, then $|\vec{b}|$ is canceled.}
+
+    \begin{enumerate}
+
+      \item To find the projection of one vector onto the other is, for the $x$ axis: $(\hat{i})Comp_{\vec{a}\vec{b}}$. For another axis, multiply by the respective unit vector instead of $\hat{i}$.
+
+    \end{enumerate}
+\end{enumerate}
+
+\section{Cross Product $-$ 12.4}
+
+\begin{flushleft}
+
+  While the dot product yields a scalar value, the cross product yields a vector, and is denoted by $\vec{a}\text{ x }\vec{b}$, and is pronounced ``a cross b''. First, one must know how to work with the determinant. A determinant in a 3x3 matrix may be found using the formula: $det_3=a_1(b_2c_3-c_2b_3)-b_1(a_2c_3-c_2a_3)+c_1(a_2b_3-b_2a_3)$\\
+
+  As such, the matrix would look like this:
+
+\end{flushleft}
+
+\begin{center}
+\begin{tabular}{| c c c |}
+
+$a_1$ & $b_1$ & $c_1$ \\
+$a_2$ & $b_2$ & $c_2$ \\
+$a_3$ & $b_3$ & $c_3$ \\
+
+\end{tabular}  
+\end{center}
+
+\begin{flushleft}
+
+  The cross product\footnote{Note: cross product may only be found in $\mathbb{R}^3$} would be found using the same process as a determinant, with unit vectors as the first row:
+
+\end{flushleft}
+
+\begin{center}
+  $$\vec{a}\text{ x }\vec{b}=$$
+\begin{tabular}{| c c c |}
+
+  $\hat{i}$ & $\hat{j}$ & $\hat{k}$ \\
+  $\vec{a}_1$ & $\vec{a}_2$ & $\vec{a}_3$ \\
+  $\vec{b}_1$ & $\vec{b}_2$ & $\vec{b}_3$ \\
+
+\end{tabular}  
+\end{center}
+
+\begin{flushleft}
+
+  A triple product may be found using a determinant when the problem is of form: $\vec{a}\cdot(\vec{b}\text{ x }\vec{c})$. The matrix for such a triple product would look as follows:
+
+\end{flushleft}  
+
+\begin{center}
+\begin{tabular}{| c c c |}
+
+  $\vec{a}_1$ & $\vec{a}_2$ & $\vec{a}_3$ \\
+  $\vec{b}_1$ & $\vec{b}_2$ & $\vec{b}_3$ \\
+  $\vec{c}_1$ & $\vec{c}_2$ & $\vec{c}_3$ \\
+
+\end{tabular}  
+\end{center}
+\end{document}

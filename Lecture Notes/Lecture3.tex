@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture III Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+
+\begin{document}
+
+\maketitle
+
+\section{Cross Product $-$ 12.4}
+
+\subsection{Cross Product Properties}
+
+\begin{enumerate}
+
+  \item $|\vec{a} \text{ x } \vec{b}| = |\vec{a}||\vec{b}|sin(\theta)$
+
+    \begin{enumerate}
+
+      \item The cross product of two parallel vectors is 0
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\section{Lines \& Planes $-$ 12.5}
+
+Points on a line may be found using the formula $\vec{r} = \vec{r_o} + t\vec{v}$, where $t$ is any value from $-\infty \text{ to } \infty$, $v$ is a direction vector, found from two given points, and $r_o$ is a vector with values from a point itself (say you are given point $P = (1, 3 -2)$, $\vec{r_o}$ would be $<1, 3, -2>)$.\\
+
+Using this formula, one would find the parametric vector equations of a line.
+
+\subsection{Line Formula}
+
+\begin{enumerate}
+
+  \item $t=\frac{x-x_o}{a}=\frac{y-y_o}{b}=\frac{z-z_o}{c}$
+
+\end{enumerate}
+
+For a segment, the formula is $\vec{r} = (1-t)\vec{r_o} + t\vec{r_1}$, where $0<t<1$\\
+
+For two segments, it can be determined whether there is skew by dividing each respective component. If the values are all equal, the lines are parallel. If not, they may either intersect or have no correlation (skew). It can be determined whether the segments intersect by solving the system of equations and finding a solution.\\
+
+To find the vector equation of a plane, one needs two vectors, $\vec{r}$ and $\vec{r_o}$, and a vector orthogonal to the plane, $\vec{n}$. To verify this, one may use the equation $\vec{n}\vec{r}=\vec{n}\vec{r_o}$. The equation of the line itself is equal to $ax+by+cz=d$, where $a, b, c, \text{ and } d$ are constants. This equation may be rewritten as $z=Ax+ By + C$, where $A= -\frac{a}{c}, B= -\frac{b}{c}, \text{ and } C= -\frac{d}{c}$
+
+
+
+\end{document}
