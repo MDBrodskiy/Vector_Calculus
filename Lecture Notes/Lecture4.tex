@@ -1,0 +1,84 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture IV Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+
+\begin{document}
+
+\maketitle
+
+\subsection{The Distance From a Point to a Plane}
+
+The distance from any point to a plane may be found using the formula $\frac{|ax+by+cz+d|}{\sqrt{a^2+b^2+c^2}}$, where $a$-$d$ are the coefficients of the equation of the plane, and $x$-$z$ are the coordinates of the point.
+
+\subsection{The Distance From a Plane to a Plane}
+
+Find one point on either plane, and repeat the process to find a distance from a point to a plane.
+
+\section{Cylinders and Quadric Surfaces}
+
+The equation of a quadric surface is given by the equation: $Ax^2+By^2+Cz^2+Dxy+Eyz+Fxz+Gx+Hy+Iz+J$, where $A$-$J$ are constants.\\
+
+There are six different figures that should be known:
+
+\begin{tabular}{|p{.45\textwidth}||p{.45\textwidth}|}
+
+\hline
+  Figure & Equation \\
+\hline
+Ellipsoid: A Figure in Which All Traces are Ellipses & $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$\\
+\hline
+  Cone: A Figure in Which Horizontal Traces are Ellipses and Vertical Traces in $x$ and $y$ are Hyperbolas & $\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z^2}{c^2}$\\
+\hline
+Elliptic Paraboloid: Horizontal Traces are Ellipses and Vertical Traces are Parabolas & $\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}$\\ 
+\hline
+Hyperboloid of One Sheet: Horizontal Traces are Ellipses and Vertical Traces are Hyperbolas & $\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$\\ 
+\hline
+Hyperbolic Paraboloid: Horizontal Traces are Hyperbolas and Vertical Traces are Parabolas & $\frac{x^2}{a^2}-\frac{y^2}{b^2}=\frac{z}{c}$\\
+\hline
+Hyperboloid of Two Sheets: Horizontal Traces are Ellipses in $z$ and Vertical Traces are Hyperbolas & $-\frac{x^2}{a^2}-\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$\\
+\hline
+
+\end{tabular}
+
+\end{document}
