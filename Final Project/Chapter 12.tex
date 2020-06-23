@@ -1,0 +1,144 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Final Project $-$ Chapter 12}
+\date{June 20, 2020}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+
+Page 841
+
+\end{center}
+
+\begin{enumerate}
+
+  \item \#15 \begin{enumerate}
+
+      \item Two vectors are parallel if they are scalar multiples of each other. For example, if $\overrightarrow{a}=<a_1,a_2,a_3>$, a parallel vector would equal $c\overrightarrow{a}$, where c is a scalar. Therefore, if a vector is equal to another vector multiplied by a scalar, they are parallel. Also, two vectors are parallel if their cross product is equal to zero.
+
+     \item Two vectors are orthogonal (perpendicular) simply if their dot product is equal to zero.
+
+     \item It can be determined whether two planes are parallel by using the vectors normal to these two planes. If the two normal vectors are parallel (which can be determined using the method from (a)), then the planes are parallel as well. 
+
+    \end{enumerate}
+
+  \item \#16 \begin{enumerate}
+
+      \item One can take the three points, $\overrightarrow{P}, \overrightarrow{Q}, \text{ and } \overrightarrow{R}$, and form two vectors. Then, if the two vectors are scalar multiples of each other, then these points are collinear.
+
+      \item From four points, one can find three vectors, say $\overrightarrow{PQ}$, $\overrightarrow{PR}$, and $\overrightarrow{PS}$. By crossing, $\overrightarrow{PQ}$ x $\overrightarrow{PR}$, one can find a vector orthogonal, say, $\overrightarrow{n}$ to both $\overrightarrow{PQ}$ and $\overrightarrow{PR}$. Then, if the crossed vector, $\overrightarrow{n}$, is orthogonal to the third vector, $\overrightarrow{PS}$, (which can be determined if the dot product, $\overrightarrow{n}\cdot\overrightarrow{PS}=0$) the four points lie on one plane. 
+
+    \end{enumerate}
+
+  \item \#17 \begin{enumerate}
+
+      \item First, one must choose two points on the line, points $A$ and $B$. Then, two vectors must be formed, $\overrightarrow{AB} \text{ and } \overrightarrow{AP} \text{ or } \overrightarrow{BP}$, where $P$ is the point. Then, the distance can be found using the formula: $\frac{|\overrightarrow{AB}\text{ x }(\overrightarrow{AP} \text{ or } \overrightarrow{BP})|}{|\overrightarrow{AB}|}$  
+
+      \item The distance from a point to a plane may be found using the formula: $\frac{|ax+by+cz+d|}{\sqrt{a^2+b^2+c^2}}$, where $a$-$d$ are the coefficients of the standard form of the plane, and $x$-$z$ are respective coordinates of the point.
+
+      \item By determining one point on a line, say $L_1$, and two points on line $L_2$, the same process from part (a) may be used.
+
+    \end{enumerate}
+
+    \begin{center}
+
+Page 843
+
+    \end{center}
+
+    \item \#15
+
+    \begin{enumerate}
+  \item $\overrightarrow{v}\Longrightarrow\langle1-4,1-(-1),5-2\rangle=\langle-3, 2, 3\rangle$ \\ $r=r_o+tv \Longrightarrow x=4-3t, y=-1+2t, z=2+3t \Longrightarrow r = \langle 4-3t, -1+2t, 2+3t\rangle$
+    \end{enumerate}
+
+    \item \#16 \begin{enumerate}
+
+  \item Because the given equations of lines are of symmetry form, they can all be rearranged in terms of $t$. This yields: $t=\frac{1}{3}(x-4)=\frac{1}{2}y=z+2\Longrightarrow x=4+3t, y=2t, z=t-2$. These are the parametric equations for the parallel line, which means that the direction vectors are the same for both lines. Parametric equations for a line are found using $r=r_o +\overrightarrow{v}t$, which means that the coefficients of $t$ are the same for both lines. To make the equations correct, the noncoefficient numbers need to be changed. This yields: $\langle 4+3t, 2t, t-2 \rangle \Longrightarrow \langle 1+3t, 2t, t-1 \rangle$. Therefore, the parametric equations of the line are $\langle 1+3t, 2t, t-1 \rangle$
+\end{enumerate}
+
+    \item \#17 \begin{enumerate}
+
+        \item The direction vector may be found by using the equation of the plane, or, more exactly, the coefficients of the variables. These coefficients give us the vector that is perpendicular to the plane: $\overrightarrow{v}=\langle 2, -1, 5 \rangle$. This vector, because it is perpendicular to the plane, is parallel to the line. Then, one must only use the formula to find: $x=-2+2t, y=2-t, z=4+5t$, or $\langle -2+2t, 2-t, 4+5t \rangle$
+
+    \end{enumerate}
+
+  \item \#25 \begin{enumerate}
+
+      \item This problem may be solved using the simple formula: $k(a_1x+b_1y+c_1z+d_1)+l(a_2x+b_2y+c_2z+d_2)=0$, where $k$ and $l$ are random constants, and $a_1-d_2$ are the coefficients of the intersecting planes. This formula gives us: $k(x-z-1)+l(y+2z-3)=0\Longrightarrow kx-kz-k+ly+2lz-3l$. By forming a vector from the coefficients, we get: $\langle k, l, 2l-k \rangle$ To find the plane perpendicular to the given plane, simply dot the direction vectors, or $\langle k, l, 2l-k \rangle \cdot \langle 1, 1, -2 \rangle\Longrightarrow 3k-3l=0\text{, or } k=l=1$. Finally, this yields: $x-z-1+y+2z-3=0\text{, or } x+y+z-4=0$ 
+
+    \end{enumerate}
+
+    \item \#26 \begin{enumerate}
+
+        \item First, the normal vector to these points needs to be found. This can be done by finding $\overrightarrow{AB}\text{ and } \overrightarrow{AC}$. $\overrightarrow{AB} = \langle -1-2, -1-1, 10-1 \rangle, \overrightarrow{AC} = \langle 1-2, 3-1, -4-1 \rangle$. $\overrightarrow{AB} \text{ x } \overrightarrow{AC} = \langle 1, 3, 1 \rangle \Longrightarrow (x-2)+3(y-1)+(z-1)=0 \Longrightarrow x+3y+z=6$
+
+        \item The vector perpendicular (and therefore parallel to the line) to the plane from part (a) is $\langle 1, 3, 1 \rangle$ This means that the parametric equations for the line are: $x=-1+t, y=-1+3t, z=10+t$. From here, the equations may be rearranged to find: $t=x+1=\frac{1}{3}(y+1)=z-10$
+
+        \item The normal vector to the first plane is: $\langle 1, 3, 1 \rangle$. The acute angle between the two normal vectors is the same as the acute angle between the planes. Therefore, the angle is: $\theta=cos^{-1}(\frac{13}{\sqrt{319}})=43.2\degree\approx43\degree$
+
+        \item The plane formulas, when set equal to each other, yield: $x+3y+z-6=2x-4y-3z-8$. Simplifying this yields: $x-7y-4z=2$. One vector from this, which will be used later, is $\langle 2, 0, 0 \rangle$. Next, finding the cross product of the normal vectors of the fields gets us: $P_1 \text{ x } P_2=-5\hat{\textbf{i}}+5\hat{\textbf{j}}-10\hat{\textbf{k}}$. Using the formula $r=r_o + vt$, it is found that $r= \langle 2, 0, 0 \rangle + t\langle -5, 5, -10 \rangle\Longrightarrow \langle 2-5t, 5t, -10t \rangle$
+
+      \end{enumerate}
+
+    \item \#27 \begin{enumerate}
+
+        \item First, a point from one plane needs to be chosen, say $(2, 0, 1)$ from the first plane. Next, plugging in known values it is found that: $\frac{|2(3)+0(y)+1(-4)-24|}{\sqrt{3^2+1+4^2}}=4.315$
+
+      \end{enumerate}
+
+    \item \#37 \begin{enumerate}
+
+        \item The radius of the ellipsoid in the $z$ direction will be the same as that of $y$, as the ellipse will be rotated around the $x$ axis. This means that the equation will be: $4x^2+y^2+z^2=16$
+
+      \end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{document}

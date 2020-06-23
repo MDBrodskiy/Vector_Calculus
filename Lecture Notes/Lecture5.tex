@@ -1,0 +1,77 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture V Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Vectors in Space $-$ 13.1}
+
+A vector function: $\overrightarrow{r}(t) = \langle f(t), g(t), h(t) \rangle = f(t)\hat{\bold{i}} + g(t)\hat{\bold{j}} + h(t)\hat{\bold{k}}$\\
+
+Example: $$\overrightarrow{r}(t)=\langle t^2, ln(2-t), \sqrt{t} \rangle$$
+The domains of each component function must be considered to find the domain of the vector function, $0\leq x < 2$\\
+
+For a vector function: $$\lim_{t\to a} \overrightarrow{r}(t)=\langle \lim_{t\to a} f(t), \lim_{t\to a} g(t), \lim_{t\to a} h(t) \rangle$$\\
+
+Example: Find the limit
+$$\lim_{t\to 0} (e^{-3t}\hat{\bold{i}} + \frac{t^2}{\sin^2{t}}\hat{\bold{j}} + \cos(2t)\hat{\bold{k}})=\hat{\bold{i}}+\hat{\bold{j}}+\hat{\bold{k}}$$
+
+\section{Derivatives and Integrals of Vector Functions $-$ 13.2}
+
+$$\overrightarrow{r}'(t)=\lim_{h\to 0} \frac{\overrightarrow{r}(t+h)-\overrightarrow{r}(t)}{h}$$
+
+$\overrightarrow{r}'(t)$ is a vector tangent to $\overrightarrow{r}(t)$, where $\overrightarrow{r}'(t)=\langle f'(t), g'(t), h'(t) \rangle$
+
+The unit tangent vector, $\overrightarrow{T}(t)$, may found using the formula: $\overrightarrow{T}(t)=\frac{\overrightarrow{r}'(t)}{|\overrightarrow{r}'(t)|}$
+
+The integral of the vector function $\overrightarrow{r}(t)$ is: $$\int_{a}^{b} \overrightarrow{r}(t) dt = \left(\int_{a}^{b} f(t) dt\right)\hat{\bold{i}} + \left(\int_{a}^{b} g(t) dt\right)\hat{\bold{j}} + \left(\int_{a}^{b} h(t) dt\right)\hat{\bold{k}}$$
+
+\end{document}
