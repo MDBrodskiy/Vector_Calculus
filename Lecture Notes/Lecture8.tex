@@ -1,0 +1,80 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture VIII Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Projectile Motion $-$ 13.4}
+
+Given an acceleration, $\overrightarrow{a}(t)$, one may find the velocity and position formulas. In projectile motion, the acceleration is always $\overrightarrow{a}(t) = g = 9.80665\left[\frac{m}{s^2}\right]$\\
+
+From here, one may find that: $\Delta v = \int \overrightarrow{a}(t) dt \Longrightarrow v-v_o=\overrightarrow{a}(t)t\Longrightarrow \overrightarrow{v}(t)=v_o+\overrightarrow{a}(t)t$\\
+
+Furthermore, one may find the position vector by integrating once more: $\Delta r = \int_{}^{}  v_o + \overrightarrow{a}(t)t dt \Longrightarrow r-r_o=v_ot+\frac{1}{2}\overrightarrow{a}(t)t^2\Longrightarrow \overrightarrow{r}(t)=r_o + v_ot+\frac{1}{2}\overrightarrow{a}(t)t^2$\\
+
+In projectile motion, acceleration only acts in the vertical direction, and, therefore:
+\begin{tabular}{c}
+
+  $\overrightarrow{r}_y(t)=r_{oy}+v_{oy}t-\frac{1}{2}gt^2$ \\
+  $\overrightarrow{v}_y(t)=v_{oy}+gt$ \\
+  $\overrightarrow{r}_x(t)=r_{ox}+v_{ox}t$ \\
+  $\overrightarrow{v}_x(t)=v_{ox}$
+
+    
+\end{tabular}
+
+One may find the acceleration through a different method by using the curvature, $\kappa$. $\kappa = \frac{|\overrightarrow{T}'(t)|}{|\overrightarrow{r}'(t)|}\Longrightarrow |\overrightarrow{T}'(t)|=\kappa |\overrightarrow{v}(t)|$\\
+Simplifying this leaves us with: $\overrightarrow{a}=|\overrightarrow{v}'|\overrightarrow{T} + \kappa |\overrightarrow{v}|^2 \overrightarrow{N}$\\
+This makes sense, because on a straight line, $\kappa = 0$, and, therefore, on a straight line, $\overrightarrow{a}=|\overrightarrow{v}'|\overrightarrow{T}$\\
+
+The components of acceleration, $a_N$ and $a_T$ can be found using the formulas: $a_N=\frac{|\overrightarrow{r}'(t)\text{ x } \overrightarrow{r}''(t)|}{|\overrightarrow{r}'(t)|}$ and $a_T = \frac{\overrightarrow{r}'(t)\cdot \overrightarrow{r}''(t)}{|\overrightarrow{r}'(t)|}$
+
+\end{document}

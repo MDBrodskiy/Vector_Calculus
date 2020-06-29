@@ -1,0 +1,137 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Final Project $-$ Chapter 13}
+\date{June 27, 2020}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+
+Page 881
+
+\end{center}
+
+\begin{enumerate}
+
+\setcounter{enumi}{10}
+
+  \item \#6 \begin{enumerate}
+
+      \item Curvature is defined as $\kappa \text{ (kappa) } = \frac{|d\bold{T}|}{|ds|}$, where $\bold{T}$ is the total tangent unit vector and $s$ is the arc length of the function. 
+
+      \item $\kappa = \frac{|\overrightarrow{T}'(t)|}{|\overrightarrow{r}'(t)|}$
+
+      \item $\kappa = \frac{|\overrightarrow{r}'(t)\text{ x }\overrightarrow{r}''(t)|}{|\overrightarrow{r}'(t)|^3}$ 
+
+      \item $\kappa = \frac{f''(x)}{(1+f'(x)^2)^{\frac{3}{2}}}$
+
+    \end{enumerate}
+
+  \item \#7 \begin{enumerate}
+
+      \item Normal: $\overrightarrow{N}=\frac{\overrightarrow{T}'(t)}{|\overrightarrow{T}'(t)|}$ Binormal: $\overrightarrow{B} = \overrightarrow{T} \text{ x } \overrightarrow{N}$
+
+      \item The normal plane is given by the normal vectors, $\overrightarrow{N}$ and $\overrightarrow{B}$. The osculating plane contains vectors $\overrightarrow{T}$ and $\overrightarrow{N}$. It wraps around (``\emph{kisses}'') the plane at a point. The osculating circle is a circle with radius $\frac{1}{\kappa}$, the inverse of the curvature. Much like the osculating plane, the edges of the circle wraps around the curve.
+
+    \end{enumerate}
+
+    \begin{center}
+
+Page 882
+
+    \end{center}
+
+    \item \#3
+
+    \begin{enumerate}
+
+      \item Because the equation of a circle is given, the function may be parametrized easily by setting $x=4\cos(t)$ and $y=4\sin(t)$. Using the parametric equations, $z=5-4\cos(t).$ This gives: $\overrightarrow{r}(t)=\langle 4\cos(t), 4\sin(t), 5-4\cos(t)\rangle$ 
+
+    \end{enumerate}
+
+    \item \#5 \begin{enumerate}
+
+        \item $\int_0^1 \overrightarrow{r}(t) dt = \int_0^1 t^2\hat{\bold{i}} dt + \int_0^1 t\cos\pi t \hat{\bold{j}} dt + \int_0^1 \sin\pi t \hat{\bold{k}} dt \Longrightarrow \langle \frac{1}{3}t^3, \frac{t}{\pi}\sin\pi t + \frac{1}{\pi^2}\cos \pi t, -\frac{1}{\pi}\cos \pi t \rangle\vline^1_0 \Longrightarrow\int_0^1 \overrightarrow{r}(t) dt = \langle \frac{1}{3}, -\frac{2}{\pi^2}, \frac{2}{\pi} \rangle$ 
+
+\end{enumerate}
+
+    \item \#8 \begin{enumerate}
+
+        \item $\int_0^1 \sqrt{x'(t)^2+y'(t)^2+z'(t)^2}dt \Longrightarrow \overrightarrow{r}'(t)=\langle 3\sqrt{t}, -2\sin2t, 2\cos2t \rangle$\\ $\Longrightarrow \int_0^1 \sqrt{9t+4\sin^22t+4\cos^22t}\Rightarrow u = 9t+4 \Rightarrow \frac{1}{9}\int_4^13 \sqrt{u} du= \frac{2}{27}(13)^\frac{3}{2}-\frac{16}{27}$  
+
+    \end{enumerate}
+
+  \item \#11 \begin{enumerate}
+
+      \item $\overrightarrow{r}'(t)=\langle 3\sin^2(t)\cos(t), -3\cos^2(t)\sin(t), 2\cos(t)\sin(t)\rangle\text{, }|\overrightarrow{r}'(t)| = \sin(t)\cos(t)\sqrt{13} \Longrightarrow\overrightarrow{T}(t)=\langle \frac{3}{\sqrt{13}}\sin(t), -\frac{3}{\sqrt{13}}\cos(t), \frac{2}{\sqrt{13}}\rangle$ 
+
+      \item $\overrightarrow{T}'(t) = \langle \frac{3}{\sqrt{13}}\cos(t), \frac{3}{\sqrt{13}}\sin(t), 0 \rangle\text{, } |\overrightarrow{T}'(t)| = \sqrt{\frac{9}{13}\sin^2(t)+\frac{9}{13}\cos^2(t)} = \frac{3}{\sqrt{13}} \Longrightarrow \overrightarrow{N}(t)= \langle \cos(t), \sin(t), 0 \rangle$
+
+      \item $\overrightarrow{B}(t)=\overrightarrow{T}(t)\text{ x }\overrightarrow{N}(t)\Longrightarrow \overrightarrow{B}(t)= -2\sin(t)\hat{\bold{i}} + 2\cos(t)\hat{\bold{j}} + 3\hat{\bold{k}}$
+
+      \item $\kappa = \frac{|\overrightarrow{T}'(t)|}{|\overrightarrow{r}'(t)|}\Rightarrow \frac{3}{\sqrt{13}}\frac{1}{\sqrt{13}\sin(t)\cos(t)}\Rightarrow \frac{3}{13\sin(t)\cos(t)}\Rightarrow \kappa = \frac{6}{13\sin(2t)} $
+
+    \end{enumerate}
+
+    \item \#13 \begin{enumerate}
+
+        \item $\kappa = \frac{f''(x)}{(1+f'(x)^2)^\frac{3}{2}}\Longrightarrow \frac{12x^2}{(1+16x^6)^\frac{3}{2}}\Longrightarrow\frac{12}{(17)^\frac{3}{2}}$ 
+
+      \end{enumerate}
+
+    \item \#19 \begin{enumerate}
+
+        \item $r_o = \langle 0, 0, 0 \rangle\text{, } v_o = \langle 1, -1, 3 \rangle\text{, } \overrightarrow{a}(t)= \langle 6t, 12t^2, -6t \rangle$\\
+          $$\overrightarrow{v}(t)=\overrightarrow{v}_o + \int \overrightarrow{a}(t)= \langle 3t^2+1, 4t^3-1, -3-3t^2$$
+          $$\overrightarrow{r}(t) = \overrightarrow{r}_o + \int \overrightarrow{v}(t)= \langle t^3+t, t^4-t, -t^3-3t \rangle$$
+          $$\therefore \overrightarrow{r}(t) = (t^3+t)\hat{\bold{i}}+(t^4-t)\hat{\bold{j}}+(-t^3-t)\hat{\bold{k}}$$
+      \end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{document}
