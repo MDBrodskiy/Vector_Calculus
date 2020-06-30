@@ -1,0 +1,90 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture X Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Limits of Multivariable Functions $-$ 14.2}
+
+Just like in Calculus I, there are three conditions for a function to be continuous:
+
+\begin{enumerate}
+
+  \item $f(a)$ exists
+
+  \item $\lim_{x\to a} f(x) = f(a)$
+
+  \item $\lim_{x\to a^-} f(x) =\lim_{x\to a^+} f(x)$
+
+\end{enumerate}
+
+In three dimensions, the same rules apply, in addition to a new one:
+
+$$\lim_{(x,y)\to(a,b)}f(x,y)=L$$ if, for every number $\epsilon > 0$ there is a corresponding number $\partial > 0$ such that,\\ if $(x,y)\in D$ and $0 < \sqrt{(x-a)^2+(y-b)^2} < \partial$ then $|f(x,y) - L| < \epsilon$
+
+\section{Partial Derivatives $-$ 14.3}
+
+For the function, $z=f(x,y)$, the partial derivatives may be expressed through the use of the limit definition of a derivative, where:
+
+$$f_x(x,y)=\lim_{\Delta x\to0} \frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}$$
+$$f_y(x,y)=\lim_{\Delta y\to0} \frac{f(x,y + \Delta y)-f(x,y)}{\Delta y}$$
+
+Some common notations are:
+
+$$f_x(x,y)=f_x=\frac{\partial f}{\partial x}=\frac{\partial}{\partial x}f(x,y)=\frac{\partial z}{\partial x} = f_1=D_1f=D_xf$$
+$$f_y(x,y)=f_y=\frac{\partial f}{\partial y}=\frac{\partial}{\partial y}f(x,y)=\frac{\partial z}{\partial y} = f_2=D_2f=D_yf$$
+
+\subsection{Finding the Partial Derivative}
+
+To find the partial derivatives of the function $f(x,y)$, one would hold $y$ constant, while differentiating with respect to $x$ to find $\frac{\partial f}{\partial x}$, and hold $x$ constant, while differentiating with respect to $y$ to find $\frac{\partial f}{\partial y}$
+
+
+\end{document}
