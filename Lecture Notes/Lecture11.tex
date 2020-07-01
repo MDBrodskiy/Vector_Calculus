@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XI Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\subsection{Second Order Partial Derivatives}
+
+Although the order of second partial differentiation usually does not matter, sometimes the second order partial derivatives may not be equal. Differentiating $\frac{\partial f}{\partial x}$ by $\frac{\partial}{\partial y}$ results in $\frac{\partial^2f}{\partial y \partial x}$. If one differentiates in the reversed order, this yields $\frac{\partial^2f}{\partial x \partial y}$, where the order of partial differentiation is read from right to left.\\
+
+\textit{Example Where $\frac{\partial^2f}{\partial y \partial x}=\frac{\partial^2f}{\partial x \partial y}$:}
+
+$$f(x,y)=x^3+x^2y^3-2y^2$$
+$$\frac{\partial f}{\partial x}=3x^2+2xy^3$$
+$$\frac{\partial f}{\partial y}=3x^2y^2-4y$$
+$$\frac{\partial^2f}{\partial y \partial x}=6xy^2$$
+$$\frac{\partial^2f}{\partial x \partial y}=6xy^2$$
+\begin{center}$\therefore \frac{\partial^2f}{\partial x \partial y}=\frac{\partial^2f}{\partial y \partial x}$\footnote{In most cases, $\frac{\partial^2f}{\partial x \partial y}=\frac{\partial^2f}{\partial y \partial x}$}\end{center}
+
+\subsection{Clairaut's Theorem}
+
+If $\frac{\partial^2f}{\partial x \partial y}$ and $\frac{\partial^2f}{\partial y \partial x}$ are continuous at point $(a, b)$, then $\frac{\partial^2f}{\partial x \partial y}=\frac{\partial^2f}{\partial y \partial x}$ at $(a, b)$\footnote{This rule applies to any nth order derivative}
+
+\subsection{Laplace's Differential Equations}
+
+Named after Pierre Laplace, the partial differential equation looks like this:
+
+$$\frac{\partial^2u}{\partial x^2} + \frac{\partial^2u}{\partial y^2}=0$$
+
+Any function that fits the criteria is called a \bold{harmonic function}
+
+\subsection{Wave Equations}
+
+Any wave, whose displacement is defined by the function $u(x,t)$ must satisfy the wave equation:
+
+$$\frac{\partial^2u}{\partial t^2}=a^2\frac{\partial^2u}{\partial x^2}$$
+
+\section{Tangent Plane Approximation and Total Differentials $-$ 14.4}
+
+The tangent plane approximation function is given by:
+
+$$z-z_o=f_x(x_o,y_o)(x-x_o)+f_y(x_o,y_o)(y-y_o)$$
+
+The definition of a total differential is:
+
+$$dz = \frac{\partial z}{\partial x}dx + \frac{\partial z}{\partial y}dy$$
+
+$dz$ represents the change in the plane approximation
+
+\end{document}
