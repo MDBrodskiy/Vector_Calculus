@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XI Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{The Multivariable Chain Rule $-$ 14.5}
+
+In three dimensions, the formula for the chain rule looks as follows:
+
+$$\frac{dz}{dt}=\frac{\partial f}{\partial x}\frac{dx}{dt} + \frac{\partial f}{\partial y}\frac{dy}{dt}$$
+
+Conditions $z=f(x,y); x=x(t), y=y(t)$\\
+
+\textit{Example:}
+
+$$z=x^2y+3xy^4; x=\sin2t,y=\cos t$$
+$$\frac{dz}{dt}=(2xy+3y^4)(2\cos2t)+(x^2+12xy^3)(-\sin t)$$
+
+Another case looks as follows:
+
+If $z=f(x,y); x=g(s,t), y=h(s,t)$, then:
+
+$$\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial s} + \frac{\partial z}{\partial y}\frac{\partial y}{\partial s}$$
+
+$$\frac{\partial z}{\partial t}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial t} + \frac{\partial z}{\partial y}\frac{\partial y}{\partial t}$$
+
+The general case of the chain rule, where $u$ is a multivariable function of $n$ variables $x_1$, $x_2$,\dots $x_n$, and each $x$ is a function of $m$ variables $t_1$,\dots$t_m$, then:
+
+$$\frac{\partial u}{\partial t_i}=\frac{\partial u}{\partial x_1}\frac{\partial x_1}{\partial t_i}+\frac{\partial u}{\partial x_2}\frac{\partial x_2}{\partial t_i}+\dots+\frac{\partial u}{\partial x_n}\frac{\partial x_n}{\partial t_i}$$
+
+\subsection{Implicit Differentiation}
+
+If $\frac{\partial f}{\partial y}\neq 0$:
+
+$$\frac{dy}{dx}=-\frac{\frac{\partial f}{\partial x}}{\frac{\partial f}{\partial y}}$$
+
+In addition to this:
+
+$$\frac{\partial z}{\partial x}=-\frac{\frac{\partial f}{\partial x}}{\frac{\partial f}{\partial z}}$$
+
+and
+
+$$\frac{\partial z}{\partial y}=-\frac{\frac{\partial f}{\partial y}}{\frac{\partial f}{\partial z}}$$
+
+\section{The Directional Derivative $-$ 14.6}
+
+The definition of a directional derivative is:
+
+$$ D_{\hat{u}}=\lim_{h\to0} \frac{f(x_o+ha, y_o + hb)-f(x_o,y_o)}{h} $$
+
+In more simplified terms:
+
+$$D_{\hat{u}}=\frac{\partial f}{\partial x} a + \frac{\partial f}{\partial y} b$$
+
+\subsection{The Gradient Vector}
+
+The gradient vector is written $\hat{\nabla} f$, and:
+
+$$\hat{\nabla} f = \frac{\partial f}{\partial x}\hat{\bold{i}} + \frac{\partial f}{\partial y}\hat{\bold{j}}$$
+
+In the case that $u = f(x,y,z)$:
+
+$$\hat{\nabla} f = \frac{\partial f}{\partial x}\hat{\bold{i}} + \frac{\partial f}{\partial y}\hat{\bold{j}}+\frac{\partial f}{\partial z}\hat{\bold{k}}$$
+
+and
+
+$$D_{\hat{u}}=\hat{\nabla}f(x,y,z)\cdot\hat{u}$$
+
+The greatest value of the gradient, written as $|\hat{\nabla}f|$, occurs in the same direction for $\hat{\bold{u}}$ and $\hat{\nabla}f$
+
+\end{document}
