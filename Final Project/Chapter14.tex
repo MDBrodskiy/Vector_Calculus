@@ -71,9 +71,12 @@ Page 981
 
   \item \#13 \begin{enumerate}
 
-      \item 
+      \item The directional derivative of $f$ (towards the direction of $\overrightarrow{\bold{u}}$) may be expressed as:
+      $$D{_\overrightarrow{\bold{u}}}=\lim_{h\to0}\frac{f(x_o+ha,y_o+hb)-f(x_o,y_o)}{h}$$
+This represents the rate of change (slope) of $f$ in the direction of $\overrightarrow{\bold{u}}$
+In geometric terms, this represents the slope of the plane tangent to $f$ at a certain point.
 
-      \item 
+      \item $D_{\overrightarrow{\bold{u}}}=f_x(x_o,y_o)a+f_y(x_o,y_o)b$ 
 
     \end{enumerate}
 
@@ -87,56 +90,69 @@ Page 982
 
     \begin{enumerate}
 
-      \item 
+      \item $\lim_{(x,y)\to(1,1)}\frac{2xy}{x^2+2y^2}$ \\
+        Test (Direct Plug-in): $\lim_{(x,y)\to(1,1)}\frac{2xy}{x^2+2y^2}=\frac{2}{3}$\\
+        Test (along $y=mx$): $\lim_{(x,y)\to(1,1)}\frac{2mx^2}{(2m^2+1)x^2}$ if $m=1\Longrightarrow \frac{2}{3}$\\
+        Test (along $y=x^2$): $\lim_{(x,y)\to(1,1)}\frac{2x^3}{x^2+2x^4}=\frac{2}{3}$
+        $$\therefore\lim_{(x,y)\to(1,1)}\frac{2xy}{x^2+2y^2}=\frac{2}{3}$$
 
     \end{enumerate}
 
+    \begin{center}
+
+Page 983
+
+    \end{center}
+
+
     \item \#13 \begin{enumerate}
 
-        \item 
+        \item $\frac{\partial f}{\partial x} = 32xy(5y^3+2x^2y)^7, \frac{\partial f}{\partial y} = 8(15y^2+2x^2)(5y^3+2x^2y)^7$ 
 
 \end{enumerate}
 
     \item \#17 \begin{enumerate}
 
-        \item 
+        \item $\frac{\partial S}{\partial u}=\arctan(v\sqrt{w}), \frac{\partial S}{\partial v} = \frac{u\sqrt{w}}{1+v^2w}, \frac{\partial S}{\partial w} = \frac{uv}{2\sqrt{w}(1+v^2w)}$
 
     \end{enumerate}
 
   \item \#25 \begin{enumerate}
 
-      \item 
-
-      \item 
-
-      \item 
-
-      \item 
+      \item $\frac{\partial z}{\partial x}=6x+2, \frac{\partial z}{\partial y}=-2y\Longrightarrow slope_x=8, slope_y=4$
+        $$z=1+8(x-1)+4(y+2)\Longrightarrow z=8x+4y+1\text{ OR } z-4y-8x=1$$
+      \item $\frac{x-1}{8}=\frac{y+2}{4}=1-z$
 
     \end{enumerate}
 
     \item \#31 \begin{enumerate}
 
-        \item 
-
+        \item $z=\pm \sqrt{x^2+4y^2-4}$
+          $$\pm\frac{\partial z}{\partial x}=\frac{x}{\sqrt{x^2+4y^2-4}}; \frac{\partial z}{\partial y} = \pm \frac{4y}{\sqrt{x^2+4y^2-4}}$$
+          $$\frac{\partial z}{\partial x}, \frac{\partial z}{\partial y} = 2\text{ @ }x=\pm2, y=\pm\frac{1}{2}, z=\mp1$$
       \end{enumerate}
 
     \item \#32 \begin{enumerate}
 
-        \item 
-
+        \item $\frac{\partial u}{\partial s}=\frac{e^{2t}}{1+se^{2t}}, \frac{\partial u}{\partial t}=\frac{2se^{2t}}{1+se^2t}$
+          $$du=(\frac{e^{2t}}{1+se^{2t}})ds+(\frac{2se^{2t}}{1+se^2t})dt$$ 
 
       \end{enumerate}
 
     \item \#35 \begin{enumerate}
 
-
+        \item First find the partials and derivatives:
+          $$\frac{dx}{dp}=6p+1,\frac{dy}{dp}=e^p+pe^p,\frac{dz}{dp}=\sin(p)+p\cos(p)$$
+          $$\frac{\partial u}{\partial x}=2xy^3, \frac{\partial u}{\partial y}=3x^2y^2,\frac{\partial u}{\partial z}=4z^3$$
+          $$du=(6p+1)(2xy^3)+(e^p+pe^p)(3x^2y^2)+(\sin(p)+p\cos(p))(4z^3)$$
 
       \end{enumerate}
 
     \item \#39 \begin{enumerate}
 
-
+        \item $$\frac{\partial z}{\partial x}=2xf(x^2-y^2), \frac{\partial z}{\partial y}=1-2yf(x^2-y^2)$$
+          $$y(2xf(x^2-y^2))+x(1-2yf(x^2-y^2))\Longrightarrow x$$
+          $$\therefore y\frac{\partial z}{\partial x}+x\frac{\partial z}{\partial y}=x$$
 
       \end{enumerate}
 
