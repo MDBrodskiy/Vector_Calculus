@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XIII Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Maxima and Minima $-$ 14.7}
+
+
+In three dimensions, a point is determined to be critical if:
+$$\frac{\partial f}{\partial x}(a,b)=0,DNE\text{ and } \frac{\partial f}{\partial y}(a,b)=0,DNE$$
+
+From here, it needs to be determined whether or not there is an extrema at point $(a,b)$, and whether it is a minima or maxima.
+
+\subsection{The Second Derivative Test}
+
+First, $\frac{\partial^2f}{\partial x^2}\text{, } \frac{\partial^2f}{\partial x \partial y}\text{, } \frac{\partial^2f}{\partial y \partial x}\text{ and } \frac{\partial^2f}{\partial y^2}$ must be found. Then the determinant, $D$, of these must be found:
+\begin{center}
+  \begin{tabular}{|c c|}
+    $f_{xx}$ & $f_{xy}$ \\
+    $f_{yx}$ & $f_{yy}$ \\
+
+  \end{tabular}
+\end{center}
+
+$$f_{xx}f_{yy}-(f_{xy})^2$$
+
+\begin{enumerate}
+
+  \item If $D > 0$, and $f_{xx}(a,b)>0$, then $f(a,b)$ is a local minimum
+
+  \item If $D > 0$, and $f_{xx}(a,b)<0$, then $f(a,b)$ is a local maximum
+
+  \item If $D < 0$, then $f(a,b)$ is not a local maximum or minimum (saddle point)
+
+\subsection{Bounded Sets}
+
+In a closed, bounded set, $f$ attains a maximum at $(x_1,y_1)$, and a minimum at $(x_2,y_2)$
+
+
+\end{enumerate}
+
+\end{document}
