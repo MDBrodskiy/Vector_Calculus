@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XIV Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Multiple Integrals $-$ 15.1}
+
+In calculus I, integrals were defined as the area, $A$, under a curve, where:
+
+$$A=\lim_{x\to\infty}\sum_{i=1}^n f(x_i^*) \Delta x$$
+
+This formula was simplified to what is known as the integral:
+
+$$\int_a^b f(x)\,dx$$
+
+The volume of a multivariable function, then, is given by:
+
+$$V \approx \sum_{i=1}^m \sum_{j=1}^n f(x_{ij}^*, y_{ij}^*) \Delta A$$
+$$V=\lim_{m,n\to\infty}\sum_{i=1}^m \sum_{j=1}^n f(x_{ij}^*, y_{ij}^*) \Delta A $$
+$$V=\iint_R f(x,y)\,dA$$
+
+\subsection{Double Integral Properties}
+
+Double integrals have many of the same properties as single integrals:
+
+$$1. \iint_R [f(x,y)+g(x,y)]\,dA=\iint_R f(x,y)\,dA + \iint_R g(x,y)\,dA$$
+
+If $c$ is a constant:
+
+$$\iint_R cf(x,y)\,dA=c\iint_R f(x,y)\,dA$$
+
+If $f(x,y)\geq g(x,y)$ for all $(x,y)$, then:
+
+$$\iint_R f(x,y)\,dA \geq \iint_R g(x,y)\,dA$$
+
+If $g(x)$ is a function of $x$ and $h(y)$ is a function of $y$:
+
+$$\iint_R g(x)h(y) dA=\int_a^b g(x)\,dx\int_c^d h(y)\,dy$$
+
+\subsection{Iterated Integrals}
+
+The double integral, $\iint_R f(x,y)\,dA$, may be broken up in order to be calculated with ease:
+
+$$\iint_R f(x,y) dA=\int_a^b \int_c^d f(x,y)\,dy\,dx$$
+
+This may be solved using the method of partial integrals, where, much like partial derivatives, only one of the variables is treated as a variable at once. As a result of this, just like with partial derivatives, the order that the operation is done in yields the same result no matter what:
+
+$$\int_a^b \int_c^d f(x,y)\,dy\,dx=\int_c^d\int_a^b f(x,y)\,dx\,dy$$
+
+\subsection{Fubini's Theorem}
+
+If $f(x,y)$ is continuous on $R=\{(x,y)|a\leq x\leq b, c\leq y\leq d\}$
+
+$$\iint_R f(x,y) dA=\int_a^b \int_c^d f(x,y)\,dy\,dx=\int_c^d\int_a^b f(x,y)\,dx\,dy$$
+
+\end{document}
