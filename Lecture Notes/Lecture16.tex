@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XVI Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+In polar coordinates, equations relating $x$ and $y$ to $r(\theta)$ must be defined:
+
+\begin{center}
+\begin{tabular}{|c c c|}
+    \hline
+    & & \\
+$x^2+y^2=r^2$ & $x=r\cos\theta$ & $y=r\sin\theta$\\
+    & & \\
+    \hline
+\end{tabular}
+\end{center}
+
+On the region, $R$, defined by:
+
+$$R=\{(r,\theta)|a\leq r\leq b, \alpha\leq \theta\leq \beta\}$$
+
+The double integral for the area of a polar region is as follows:
+
+$$\iint_R f(x,y)\,dA=\lim_{(n,m)\to\infty} \sum_{i=1}^m\sum_{j=1}^n f(r_i^*\cos\theta_j^*,r_i^*\sin\theta_j^*)\,\DeltaA$$
+
+This all simplifies down to:
+
+$$\int_\alpha^\beta\int_a^b f(r\cos\theta,r\sin\theta)r\, dr\, d\theta$$
+
+For general polar regions, the same process as for Cartesian coordinates is used:
+
+$$\iint_D f(x,y)\,dA=\int_\alpha^\beta\int_{h_1(\theta)}^{h_2(\theta)} f(r\cos\theta,r\sin\theta)r\,dr\,d\theta$$
+
+\end{document}
