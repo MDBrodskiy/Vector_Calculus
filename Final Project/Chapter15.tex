@@ -60,13 +60,33 @@ Page 1061
 
   \item \#2 \begin{enumerate}
 
-		\item 1
+      \item A rectangular $D$ is defined with $x$ and $y$ being confined by numbers only. In a general region, $D$ has one of two variables confined by functions: $h_1(y)\leq x\leq h_2(y)$, or $g_1(x)\leq y\leq g_2(x)$
+
+      \item A Type I region is created when the $y$ variable is bounded by functions: $g_1(x)\leq y\leq g_2(x)$. These may be evaluated by finding: 
+        $$\iint_D f(x,y)\,dA = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,y)\,dy\,dx$$
+
+      \item A Type II region is created when the $x$ variable is bounded by functions: $h_1(y)\leq x\leq h_2(y)$. These may be evaluated by finding: 
+        $$\iint_D f(x,y)\,dA = \int_c^d\int_{h_1(y)}^{h_2(y)} f(x,y)\,dx\,dy$$
+
+      \item If necessary, a double integral may be split into two regions: 
+        $$\iint_D f(x,y)\,dA=\iint_{D_1}f(x,y)\,dA+\iint_{D_2}f(x,y)dA$$
+In addition to this, if a function of $x$ is multiplied by a function of $y$, the two functions may be integrated separately:
+$$\iint_Dg(x)h(y)\,dA=\int_a^bg(x)\,dx\int_c^dh(y)\,dy$$
+As with single integrals, a constant may be taken out of the integrand:
+$$\iint_D cf(x,y)\,dA=c\iint_Df(x,y)\,dA$$
+Also, added functions may be separated:
+$$\iint_D [f(x,y)+g(x,y)]\,dA=\iint_D f(x,y)\,dA+\iint_D g(x,y)\,dA$$
+If $1$ is integrated, the area of $D$ will be found:
+$$\iint_D 1\,dA=A(D)$$
+If there are two constants, $m$ and $M$, and $m\leq f(x,y)\leq M$ for all $(x,y)$ in $D$, then:
+$$mA(D)\leq \iint_D f(x,y)\,dA\leq MA(D)$$
 
     \end{enumerate}
 
   \item \#6 \begin{enumerate}
 
-      \item 2
+      \item To find the surface area, one would simply use the surface area formula:
+        $$A(S)=\iint_D\sqrt{f_x(x,y)^2+f_y(x,y)^2 + 1}\,dA$$
 
     \end{enumerate}
 
@@ -80,63 +100,89 @@ Page 1062
 
     \begin{enumerate}
 
-      \item 3
-
+      \item The work is as follows:
+        $$\int_1^2\int_0^2 (y+2xe^y)\,dx\,dy$$
+        $$\int_1^2(2y+4e^y)\,dy$$
+        $$y^2+4e^y\Big|_1^2\Longrightarrow 4e^2-4e+3$$
     \end{enumerate}
 
 
     \item \#6 \begin{enumerate}
 
-        \item 4 
+        \item The work is as follows:
+          $$\int_0^1\int_x^{e^x}3xy^2\,dy\,dx$$
+          $$\int_0^1 xe^{3x}-x^4\,dx$$
+          $$\frac{1}{3}xe^{3x}-\frac{1}{9}e^{3x}-\frac{1}{5}x^5\Big|_0^1 \Longrightarrow \frac{2}{9}e^3-\frac{4}{45}$$
 
 \end{enumerate}
 
     \item \#9 \begin{enumerate}
 
-        \item 5
+        \item The work is as follows:
+          $$D=\{(r,\theta)|2\leq r\leq 4, 0\leq \theta\leq \pi\}$$
+          $$\int_0^{\pi}\int_2^4f(r\cos\theta,r\sin\theta)r\,dr\,d\theta$$
+
 
     \end{enumerate}
 
   \item \#19 \begin{enumerate}
 
-      \item 6
-      
+      \item The work is as follows:
+        $$\int_0^1 1\,dx\int_x^1 \cos(y^2)\,dy$$
+        $$\frac{1}{2y}\sin(y^2)$$
+        $$\frac{1}{2}\sin(1)$$
+
         \end{enumerate}
 
     \item \#23 \begin{enumerate}
 
-        \item 7
+        \item The work is as follows:
+          $$\int_0^1\int_0^{\sqrt{x}} \frac{y}{1+x^2}\,dy\,dx$$
+          $$\frac{1}{2}\int_0^1 \frac{x}{1+x^2}\,dx$$
+          $$\frac{1}{4}\int_1^2 \frac{1}{u}\,du$$
+          $$\frac{1}{4}\ln(u)\Big|_1^2=\frac{1}{4}\ln(2)$$
+
 
       \end{enumerate}
 
     \item \#27 \begin{enumerate}
 
-        \item 8 
+        \item This would be much easier in polar coordinates. Therefore, the angle between the line $y=\sqrt{3}x$ and the $x$ axis must be found. The angle turns out to be $\frac{\pi}{3}$, and the radius is 3. Then, the iterated integrals may be set up: 
+          $$\int_0^{\frac{\pi}{3}}\int_0^3 r^4\,dr\,d\theta$$
+          $$\int_0^{\frac{\pi}{3}} \frac{243}{5}\,d\theta$$
+          $$\frac{243}{5}\theta\Big|_0^{\frac{\pi}{3}}=\frac{81\pi}{5}$$
 
       \end{enumerate}
 
     \item \#35 \begin{enumerate}
 
-        \item 9
+        \item The work is as follows:
+          $$\int_0^2\int_1^4 x^2+4y^2\,dy\,dx$$
+          $$\int_0^2 3x^2+84\,dx$$
+          $$x^3+84x\Big|_0^2=176$$
 
       \end{enumerate}
 
     \item \#37 \begin{enumerate}
 
-        \item 10
+        \item The given points result in a pyramid. This pyramid has an isosceles base, with side lengths 2. This means the area of the base is equal to $2$. Furthermore, the height of the pyramid is $1$ using this in the formula for the volume of a pyramid results in: $\frac{1}{3}(2)(1)=\frac{2}{3}$  
 
       \end{enumerate}
 
 	\item \#53 \begin{enumerate}
 	
-		\item 11
+		\item The work is as follows:
+        $$\int_{-1}^1\int_{x^2}^1\int_0^{1-y}\f(x,y,z)\,dx\,dy\,dz\Longrightarrow\int_0^{1}\int_{0}^{1-z}\int_{-\sqrt{y}}^{\sqrt{y}}f(x,y,z)\,dx\,dy\,dz$$
 	
 	\end{enumerate}
 	
 	\item \#55 \begin{enumerate}
 	
-		\item 12
-	
+		\item The work is as follows:
+          $$J=\frac{1}{2}$$
+          $$\int_2^4\int_{-2}^0\frac{u}{2v}\,du\,dv$$
+          $$-\int_{2}^4 \frac{1}{v}\,dv=-\ln(2) $$
+
 	\end{enumerate}
 	
 \end{enumerate}
