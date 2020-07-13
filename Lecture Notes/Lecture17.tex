@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XVI Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Mass and Density $-$ 15.4}
+
+The mass may be expressed as 
+$$m=\iint_D \rho(x,y)\,dA$$
+
+Total charge is expressed as:
+$$Q=\iint_D \sigma(x,y)\,dA$$
+
+The (first) moments on the $x$ and $y$ axis, respectively, may be found by using:
+
+$$M_x=\iint_D y\rho(x,y)\,dA\text{ and }M_y=\iint_D x\rho(x,y)\,dA$$
+
+The center of mass, $(\overline{x},\overline{y})$ may be found by rearranging the formula:
+
+$$m\overline{x}=M_y\text{ and } m\overline{y}=M_x$$
+$$\overline{x}=\frac{M_y}{m}=\frac{\iint_D x\rho(x,y)\,dA}{\iint_D \rho(x,y)}\,dA$$
+  $$\overline{y}=\frac{M_x}{m}=\frac{\iint_D y\rho(x,y)\,dA}{\iint_D \rho(x,y)}\,dA$$
+
+  The moment of inertia (or the second moment) is $mr^2$, where $r$ is the distance from a particle to the axis. About the $x$ axis, the moment of inertia is equal to:
+
+  $$I_x = \iint_D y^2\rho(x,y)\,dA$$
+
+  Across the $y$ axis the moment of inertia is equal to:
+
+  $$I_y=\iint_D x^2\rho(x,y)\,dA$$
+
+  In addition to this, the polar moment of inertia (about the origin) is equal to:
+
+  $$I_0\iint_D (x^2+y^2)\rho(x,y)\,dA$$
+
+  This means that $I_0=I_x+I_y$
+
+  \section{Surface Area $-$ 15.5}
+
+  The surface area, $A(S)$ is defined by:
+
+  $$A(S)=\lim_{(m,n)\to\infty}\sum_{i=1}^m\sum_{j=1}^n \Delta T_ij$$
+
+  $T_ij$ is defined by $|a\text{ x }b|$, where:
+
+  $$a=\Delta x\bold{\hat{i}} + f_x(x_i,y_i)\Delta x \bold{\hat{k}}$$
+  $$b=\Delta y\bold{\hat{j}} + f_y(x_i,y_j)\Delta y \bold{\hat{k}}$$
+
+  Therefore, as an iterated integral, the surface area may be expressed as:
+
+  $$A(S)=\iint_D \sqrt{1+\left(\frac{\partial z}{\partial x}\right)^2+\left(\frac{\partial z}{\partial y}\right)^2}\,dA$$
+
+
+\end{document}
