@@ -52,6 +52,90 @@ citecolor=blue,
 
 \maketitle
 
+\section{Triple Integrals $-$ 15.6}
 
+Given a region $B$ where:
+
+$$B=\{(x,y,z)|a\leq x\leq b, c\leq y\leq d, r\leq z\leq s\}$$
+
+If this region is filled with many smaller boxes, or sub-boxes, the triple Riemann sum would look as such:
+
+$$\sum_{i=1}^l\sum_{j=1}^m\sum_{k=1}^n f(x_{ijk}^*,y_{ijk}^*,z_{ijk}^*)\,\Delta V$$
+
+To form an integral, this triple Riemann must approach infiinty:
+
+$$\iiint_B f(x,y,z)\,dV=\lim_{(l,m,n)\to\infty}\sum_{i=1}^l\sum_{j=1}^m\sum_{k=1}^n f(x_{ijk}^*,y_{ijk}^*,z_{ijk}^*)\,\Delta V$$
+
+Furthermore, Fubini's Theorem, which was applied to double integrals, may be applied to triple integrals, if $f$ is continuous on $B=[a,b]\text{ x }[c,d]\text{ x }[r,s]$:
+
+$$\iiint_B f(x,y,z)\,dV=\int_a^b\int_r^s\int_c^df(x,y,z)\,dy\,dz\,dx$$
+
+\flushleft{
+\textit{Example:}
+Evaluate the following triple integral along $B=\{(x,y,z)|0\leq x\leq1, -1\leq y\leq2,0\leq z\leq3\}$:\\
+}
+$$\iiint_B xyz^2\,dV$$
+$$\int_0^1\int_{-1}^2\int_0^3 xyz^2\,dz\,dy\,dx$$
+$$\int_0^1\int_{-1}^2 3xy\,dy\,dx$$
+$$\int_0^1\frac{27x}{2}\,dx$$
+$$\frac{27x^2}{4}\Big|_0^1=\frac{27}{4}$$
+
+\subsection{Triple Integrals over General Regions}
+
+A Type I general region is defined by $E$, where:
+
+$$E=\{(x,y,z)|(x,y)\in D, u_1(x,y)\leq z\leq u_2(x,y)\}$$
+
+These boundaries result in the following Integral:
+
+$$\iiint_E f(x,y,z)\,dV$$
+
+This may be simplified, using Fubini's Theorem, to form the following:
+
+$$\iiint_E f(x,y,z)\,dV= \iint_D \left[\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)\,dz\right]\,dA$$
+
+A more complicated region is formed when $D$ and $E$ are Type I regions, which means: $E=\{(x,y,z)|a\leq x\leq b, g_1(x)\leq y\leq g_2(x), u_1(x,y)\leq z\leq u_2(x,y)\}
+
+This yields the triple integral:
+
+$$\iiint_Ef(x,y,z)\,dV=\int_a^b\int_{g_1(x)}^{g_2(x)}\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)\,dz\,dy\,dx$$
+
+If $D$ is a Type II region, while $E$ is Type I, this results in: 
+
+$$\iiint_Ef(x,y,z)\,dV=\int_c^d\int_{h_1(y)}^{h_2(y)}\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)\,dz\,dx\,dy$$
+
+Region $E$ is a Type II region when $E=\{(x,y,z)|(y,z)\in D,u_1(y,z)\leq x\leq u_2(y,z)$
+
+  $$\iiint_E f(x,y,z)\,dV= \iint_D \left[\int_{u_1(y,z)}^{u_2(y,z)}f(x,y,z)\,dx\right]\,dA$$
+
+  Finally, region $E$ is Type III if $E=\{(x,y,z)|(x,z)\in D,u_1(x,z)\leq y\leq u_2(x,z)$
+
+This forms the integral:
+
+
+  $$\iiint_E f(x,y,z)\,dV= \iint_D \left[\int_{u_1(x,z)}^{u_2(x,z)}f(x,y,z)\,dy\right]\,dA$$
+
+  Much like in double integrals, a function's mass, moments, and center of mass may be determined through triple integration. The formulas are as follows:
+For mass:
+  $$m=\iiint_E \rho(x,y,z)\,dV$$
+For the moments about the three coordinate planes:
+  $$ M_{yz} = \iiint_E x\rho(x,y,z)\,dV\,\,\,\,\,M_{xz}=\iiint_E y\rho(x,y,z)\,dV$$
+  $$M_{xy}=\iiint_E z\rho(x,y,z)\,dV$$
+The center of mass at $(\overline{x},\overline{y},\overline{z})$
+$$\overline{x}=\frac{M_{yz}}{m}\,\,\,\overline{y}=\frac{M_{xz}}{m}\,\,\,\overline{z}=\frac{M_{xy}}{m}$$
+Finally, the moment of inertia formulas are:
+$$I_x=\iiint_E (y^2+z^2)\rho(x,y,z)\,dV$$
+$$I_y=\iiint_E (x^2+z^2)\rho(x,y,z)\,dV$$
+$$I_z=\iiint_E (x^2+y^2)\rho(x,y,z)\,dV$$
+
+\subsection{Change of Variables in Triple Integrals}
+
+In three dimensions, a change of variables revolves around the Jacobian. The Jacobian of a transformation where $x=g(u,v)$ and $y=h(u,v)$ looks as follows:
+
+$$\frac{\partial(x,y)}{\partial(u,v)}=\Large{\begin{vmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\\ \end{vmatrix}}=\frac{\partial x}{\partial u}\frac{\partial y}{\partial v} - \frac{\partial x}{\partial v}\frac{\partial y}{\partial u}$$
+
+In a double integral, this change of variables would result in the integrand being multiplied by the Jacobian:
+
+$$\iint_R f(x,y)\,dA = \iint_S f(x(u,v),y(u,v)) \Big{|}\frac{\partial(x,y)}{\partial(u,v)}\Big{|}\,du\,dv$$
 
 \end{document}
