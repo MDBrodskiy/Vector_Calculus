@@ -52,6 +52,50 @@ citecolor=blue,
 
 \maketitle
 
+\section{Vector Fields $-$ 16.1}
 
+If the region $D$ lies in $\mathbb{R}^2$, then the function for the field is as follows:
+
+$$\bold{\bar{F}}(x,y)=P(x,y)\bold{\hat{i}}+Q(x,y)\bold{\hat{j}}$$
+
+If $D$ lies in $\mathbb{R}^3$:
+
+$$\bold{\bar{F}}(x,y)=P(x,y)\bold{\hat{i}}+Q(x,y)\bold{\hat{j}}+R(x,y)\bold{\hat{k}}$$
+
+The formula for Newton's law of gravitation is as follows:
+
+$$|\bold{\bar{F}}|=\frac{GmM}{r^2}$$
+
+This may be transformed into a vector field by using the following steps:
+
+$$|\bold{\bar{F}}|=\frac{GmM}{r^2}$$
+$$|\bold{\bar{F}}|=\frac{GmM}{r^3}\bold{\hat{r}}$$
+$$\bold{\hat{r}}=\langle x, y, z\rangle,\,r=\sqrt{x^2+y^2+z^2}$$
+$$|\bold{\bar{F}}|=\frac{GmMx\bold{\hat{i}}}{(x^2+y^2+z^2)^{\frac{3}{2}}}+\frac{GmMy\bold{\hat{j}}}{(x^2+y^2+z^2)^{\frac{3}{2}}}+\frac{GmMz\bold{\hat{k}}}{(x^2+y^2+z^2)^{\frac{3}{2}}}$$
+
+Calling back to the gradient, which is written as $\nabla f(x,y)=\frac{\partial f}{\partial x}\bold{\hat{i}} + \frac{\partial f}{\partial y}\bold{\hat{j}}$, where $f(x,y)$ is a scalar function. This may be used in conjunction with vector fields.\\
+
+Any vector field which has $\bold{\bar{F}}=\nabla f$ is called a conservative vector field. In such a case, $f$ is called a potential function for $\bold{\bar{F}}$ 
+
+\textit{In Physics:}
+Newton's formula for gravitation is a conservative vector field.
+In addition to this, the potential function, $f$, for conservative vector fields was used to find potential electrical and magnetic field, in addition to the aforementioned gravitational field.
+
+
+\section{Line Integrals $-$ 16.2}
+
+A line integral may be found using the formula:
+
+$$\int_C f(x,y)\,ds$$
+
+As used in an earlier chapter, $ds=\sqrt{(\frac{dx}{dt})^2+(\frac{dy}{dt})^2}$
+
+Therefore, the line integral may be found by using:
+
+$$\int_C f(x,y)\,ds=\int_a^b f(x(t),y(t)) \sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\,dt$$
+
+Much like any other integral, when applied to a piecewise function, the integral may be broken up:
+
+$$\int_C f(x,y)\,ds=\int_{C_1} f(x,y)\,ds+\int_{C_2} f(x,y)\,ds+\int_{C_3} f(x,y)\,ds+\dots \int_{C_n} f(x,y)\,ds+$$
 
 \end{document}
