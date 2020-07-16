@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Lecture XX Notes}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Line Integrals (Continued) $-$ 16.2}
+
+A line integral defined by the function $f(x,y,z)$ may be integrated by using the formula:
+
+$$\int_C f(x,y,z)\,ds=\int_C f(x(t),y(t),z(t))\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2+\left(\frac{dz}{dt}\right)^2}\,dt$$
+
+Given a vector function, $\overrightarrow{r}(t)$, the above formula may be simplified to yield:
+
+$$\int_C f(x,y,z)\,ds=\int_C f(\overrightarrow{r}(t))|\overrightarrow{r}'(t)|\,dt$$
+
+Line integrals may also appear with respect to $dx$ and $dy$. This may be simplified by finding $dx$ and $dy$ in terms of $dt$:
+
+$$\int_C f(x,y)\,dx = \int_a^b f(x(t),y(t))x'(t)\,dt$$
+$$\int_C f(x,y)\,dy = \int_a^b f(x(t),y(t))y'(t)\,dt$$
+
+When line integrals appear in such a form it is abbreviate them:
+
+$$\int_C P(x,y)\,dx+\int_C Q(x,y)\,dy=\int_C P(x,y)\,dx+Q(x,y),dy$$
+
+In physics, the formula for work was defined as $W=Fd\cos(\theta)$
+
+This may be found by integrating:
+
+$$W=\int_a^b \overrightarrow{F}(\overrightarrow{r}(t))\cdot\frac{\overrightarrow{r}'(t)}{|\overrightarrow{r}'(t)|}\,ds$$
+$$W=\int_a^b \overrightarrow{F}(\overrightarrow{r}(t))\cdot\frac{\overrightarrow{r}'(t)}{|\overrightarrow{r}'(t)|}|\overrightarrow{r}'(t)|\,dt$$
+$$W=\int_a^b \overrightarrow{F}(\overrightarrow{r}(t))\cdot\overrightarrow{r}'(t)\,dt$$
+$$W=\int_a^b \overrightarrow{F}(\overrightarrow{r}(t))\cdot\overrightarrow{r}'(t)\,dt$$
+$$W=\int_a^b \overrightarrow{F}\cdot\overrightarrow{r}\,dt$$
+
+This yields the work done on a particle by a field.
+
+\end{document}
+
