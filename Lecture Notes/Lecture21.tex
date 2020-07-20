@@ -57,15 +57,15 @@ citecolor=blue,
 
 The Fundamental Theorem of Line Integrals states that, if $C$ is a smooth, continuous curve, and $\overrightarrow{r}'(t)$, $a\leq t\leq b$, then:
 
-$$\int_C \nabla f\,dr=f(\overrightarrow{r}(b))-f(\overrightarrow{r}(a))$$
+$$\int_a^b \nabla f\,dr=f(\overrightarrow{r}(b))-f(\overrightarrow{r}(a))$$
 
 \textit{Example:} Given $f(x,y,z)=\cos(\pi x)+\sin(\pi y)-xyz$, and $C$ is any path from $(1,\frac{1}{2}, 2)$ to $(2,1,-1)$, Find:
 
 $$\int_C \nabla f\,dr$$
 
-$$\int_C \nabla f\,dr=f(2,1,-1)-f(1,\frac{1}{2},2)$$
+$$\int_C \nabla f\,dr=f(2,1,-1)-f\left(1,\frac{1}{2},2\right)$$
 
-$$(\cos(2\pi)+\sin(\pi)+2)-(\cos(\pi)+\sin(\frac{\pi}{2})-1)$$
+$$(\cos(2\pi)+\sin(\pi)+2)-(\cos(\pi)+\sin\left(\frac{\pi}{2}\right)-1)$$
 
 $$\int_C \nabla f\,dr=4$$
 
@@ -108,7 +108,7 @@ Furthermore, a region, $D$ may be called simply connected when there are no hole
 
 \end{enumerate}  
 
-    Given a function, $\overrightarrow{F}(x,y)=P(x,y)\bold{\hat{i}}+Q(x,y)\bold{\hat{j}},  $\overrightarrow{F}$ is conservative if:
+    Given a function, $\overrightarrow{F}(x,y)=P(x,y)\bold{\hat{i}}+Q(x,y)\bold{\hat{j}}$,  $\overrightarrow{F}$ is conservative if:
     $$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$$
 
     \subsection{Solving for $\nabla f$}
@@ -123,7 +123,7 @@ Furthermore, a region, $D$ may be called simply connected when there are no hole
     $$\frac{\partial f}{\partial y}=2x^4y^3+y$$
     $$f(x,y)=\int_C 2x^3y^4+x\,dx\Rightarrow\frac{1}{2}(x^4y^4+x^2)+h(y)$$
     $$\frac{\partial f}{\partial y}=2x^4y^3+h'(y)=2x^4y^3+y$$
-    $${2x^4y^3}+h'(y)=\cancel{2x^4y^3}+y$$
+    $$\cancel{2x^4y^3}+h'(y)=\cancel{2x^4y^3}+y$$
     $$h'(y)=y\Rightarrow h(y)=\frac{1}{2}y^2$$
     $$f(x,y)=\frac{1}{2}(x^4y^4+x^2+y^2)$$
 
