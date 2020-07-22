@@ -40,7 +40,7 @@ citecolor=blue,
 
 
 \title{Final Project $-$ Chapter 16}
-\date{July 18, 2020}
+\date{July 23, 2020}
 \author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
 
 
@@ -60,13 +60,17 @@ Page 1148
 
   \item \#5 \begin{enumerate}
 
-      \item  
+      \item The Fundamental Theorem for Line Integrals states that, in a conservative vector field (where $\bold{\overrightarrow{F}}=\nabla f$ exists), the integral of the derivative of the given function is equal to values of the function of the top bound minus the bottom:
+
+        $$\int_a^b \bold{\overrightarrow{F}}\,d\bold{r}=\int_a^b \nabla f\,d\bold{r}=f(\bold{r}(b))-f(\bold{r}(a))$$
 
     \end{enumerate}
 
   \item \#6 \begin{enumerate}
 
-      \item 
+      \item If a line integral is independent of path, it yields the same value regardless of the path, meaning that, any line starting at the same point and ending at the same point will result in the same result of the line integral. 
+
+      \item If the line integral is independent of path, this signifies that $\bold{\overrightarrow{F}}$ is a conservative vector field. 
 
     \end{enumerate}
 
@@ -75,8 +79,10 @@ Page 1148
 
     \begin{enumerate}
 
-      \item 
+      \item Green's Theorem states that, given a line integral on a closed path, $C$, of a non-conservative vector field (otherwise the integrand becomes zero), this line integral is equal to the double integral of the partial derivative of the $Q$ function with respect to $x$, minus the partial derivative of the $P$ function with respect to $y$, all on the region $D$ formed by the closed path. 
       
+        $$\int_C P(x,y)\,dx+Q(x,y)\,dy=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\,dA$$
+\newpage
     \end{enumerate}
 
 \begin{center}
@@ -89,6 +95,8 @@ Page 1149
 
         \item The work is negative because it is done in a direction opposing the vector field.
 
+        \item Not Covered
+
 \end{enumerate}
 
     \item \#3 \begin{enumerate}
@@ -97,7 +105,7 @@ Page 1149
           $$\int_0^{\pi} 9\cos^2(t)\sin(t)\sqrt{10}\,dt$$
           $$u=\cos(t)\Longrightarrow du=-\sin(t)dt$$
           $$-\int_1^{-1}9u^2\sqrt{10} $$
-          $$-\sqrt{10}(3u^3\Big|_1^{-1})\Longrightarrow -\sqrt{10}(-6)$$
+          $$-\sqrt{10}\left(3u^3\Big|_1^{-1}\right)\Longrightarrow -\sqrt{10}(-6)$$
           $$6\sqrt{10$$
 
     \end{enumerate}
@@ -124,19 +132,45 @@ Page 1149
 
     \item \#11 \begin{enumerate}
 
-        \item 
+        \item $\bold{\overrightarrow{F}}$ is conservative if $\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x} 
+
+          $$\frac{\partial P}{\partial y}=2xe^{xy}+x^2ye^{xy}$$
+          $$\frac{\partial Q}{\partial x}=2xe^{xy}+x^2ye^{xy}$$
+          \begin{center} \therefore $\bold{\overrightarrow{F}}$ is conservative \end{center}
+          $$\int e^y+x^2e^{xy}\,dy=e^y+xe^{xy}+C$$
+          $$\therefore f(x,y)=xe^{xy}+e^{y}+C$$
+
 
       \end{enumerate}
 
     \item \#13 \begin{enumerate}
 
-        \item 
+        \item $\bold{\overrightarrow{F}}$ is conservative if $\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}
+
+          $$\frac{\partial Q}{\partial x}=8x^3y-6xy^2$$
+          $$\frac{\partial P}{\partial y}=8x^3y-6xy^2$$
+          \begin{center} \therefore $\bold{\overrightarrow{F}}$ is conservative \end{center}
+          $$\int_C \bold{\overrightarrow{F}}\,d\bold{r}=\bold{\overrightarrow{F}}(\bold{r}(1))-\bold{\overrightarrow{F}}(\bold{r}(0))$$
+            $$\bold{\overrightarrow{F}}(\bold{r}(1))-\bold{\overrightarrow{F}}(\bold{r}(0))=0$$
 
       \end{enumerate}
 
     \item \#15 \begin{enumerate}
 
-        \item  
+        \item Evaluating by line integral yields: $\{C_1:\, x=t \, y=t^2\}$, $\{C_2:\, x=t \, y=1\}$, which yields the following line integral:
+
+          $$\int_{-1}^1 t(t^2)^2-(2t)(t)^2(t^2)+t\,dt$$
+          $$\int_{-1}^1 t-t^5\,dt=\frac{1}{2}t^2-\frac{1}{6}t^6\Big|_{-1}^1$$
+          $$\frac{1}{2}t^2-\frac{1}{6}t^6\Big|_{-1}^1=\frac{1}{3}-\frac{1}{3}=0$$
+
+Evaluating by Green's Theorem yields:
+
+$$\frac{\partial Q}{\partial x}=-2xy$$
+$$\frac{\partial P}{\partial y}=2xy$$
+$$\iint_D -4xy\,dA\Rightarrow-\int_{-1}^1\left(\int_{x^2}^1 4xy\,dy\right)\,dx$$
+$$-\int_{-1}^1 2x-2x^5\,dx$$
+$$x^2-\frac{1}{3}x^6\Big|_{-1}^1=-\left(\frac{2}{3}-\frac{2}{3}\right)=0$$
+\begin{center} $\therefore$ Green's Theorem is true for this line integral \end{center}
 
       \end{enumerate}
 
