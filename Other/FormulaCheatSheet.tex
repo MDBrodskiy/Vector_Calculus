@@ -1,0 +1,566 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Written By Michael Brodskiy
+% Class: Analytic Geometry & Calculus III (Math-292)
+% Professor: V. Cherkassky
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article} 
+\usepackage{alphalph}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage[super]{nth}
+\usepackage{everysel}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\geometry{top=1.0in,bottom=1.0in,left=1.0in,right=1.0in}
+\newcommand{\subtitle}[1]{%
+  \posttitle{%
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em}%
+
+}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,      
+urlcolor=blue,
+citecolor=blue,
+}
+
+\urlstyle{same}
+
+
+\title{Calculus III Formula Sheet}
+\date{\today}
+\author{Michael Brodskiy\\ \small Professor: V. Cherkassky}
+
+% Mathematical Operations:
+
+% Sum: $$\sum_{n=a}^{b} f(x) $$
+% Integral: $$\int_{lower}^{upper} f(x) dx$$
+% Limit: $$\lim_{x\to\infty} f(x)$$
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 12}
+
+\subsection{Unit 1}
+
+\begin{enumerate}
+
+  \item The distance formula in three dimensions:
+    $$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}$$
+
+  \item A sphere with center $(h,k,l)$:
+    $$(x-h)^2+(y-k)^2+(z-l)^2=r^2$$
+
+\end{enumerate}
+
+\subsection{Unit 2}
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+
+  \item Vector given two points, $A=(x_1,y_1,z_1)$ and $B=(x_2,y_2,z_1)$
+    $$\overrightarrow{v}=\langle x_2-x_1, y_2-y_1, z_2-z_1\rangle$$
+
+  \item Magnitude of vector in:
+    \begin{enumerate}
+
+      \item Two dimensions ($a=\langle a_1,a_2\rangle)$:
+
+        $$|\overrightarrow{a}|=\sqrt{(a_1)^2+(a_2)^2}$$
+
+      \item Three dimensions ($a=\langle a_1,a_2,a_3\rangle)$:
+
+        $$|\overrightarrow{a}|=\sqrt{(a_1)^2+(a_2)^2+(a_3)^2}$$
+
+    \end{enumerate}
+
+  \item Standard Basis Vectors:
+
+    $$\bold{\hat{i}}=\langle 1,0,0\rangle\,\,\,\,\,\,\,\bold{\hat{j}}=\langle0,1,0\rangle\,\,\,\,\,\,\,\bold{\hat{k}}=\langle 0,0,1\rangle$$
+
+  \item Unit Vectors (Any vector with magnitude 1):
+    $$\overrightarrow{u}_a=\frac{\overrightarrow{a}}{|\overrightarrow{a}|}$$
+
+\end{enumerate}
+
+\subsection{Unit 3}
+
+\begin{enumerate}
+    \setcounter{enumi}{5}
+
+  \item Dot Product\footnote{Two vectors are orthogonal (perpendicular) if $\overrightarrow{a}\cdot\overrightarrow{b}=0$} (Also Known As Scalar Product):
+
+    $$\overrightarrow{a}\cdot\overrightarrow{b}=a_1b_1+a_2b_2+a_3b_3$$
+
+  \item Dot Product Angle Formula:
+    $$\overrightarrow{a}\cdot\overrightarrow{b}=|\overrightarrow{a}||\overrightarrow{b}|\cos\theta$$
+
+  \item Direction Angles:\footnote{$\alpha$ corresponds to the $x$ axis, $\beta$ to the $y$ axis, and $\gamma$ to the $z$ axis}
+    $$\cos\alpha=\frac{\overrightarrow{a}\bold{\hat{i}}}{|\overrightarrow{a}|}$$
+    $$\cos\beta=\frac{\overrightarrow{a}\bold{\hat{j}}}{|\overrightarrow{a}|}$$
+    $$\cos\gamma=\frac{\overrightarrow{a}\bold{\hat{k}}}{|\overrightarrow{a}|}$$
+
+\item Projections:
+
+  \begin{enumerate}
+
+    \item Scalar projection of $\overrightarrow{b}$ onto $\overrightarrow{a}$:
+      $$comp_{\overrightarrow{a}}\overrightarrow{b}=\frac{\overrightarrow{a}\cdot\overrightarrow{b}}{|\overrightarrow{a}|}$$
+
+    \item Vector projection of $\overrightarrow{b}$ onto $\overrightarrow{a}$:
+      $$proj_{\overrightarrow{a}}\overrightarrow{b}=\left(\frac{\overrightarrow{a}\cdot\overrightarrow{b}}{|\overrightarrow{a}|}\right)\frac{\overrightarrow{a}}{|\overrightarrow{a}|}$$
+  \end{enumerate}
+
+\end{enumerate}
+
+\subsection{Unit 4}
+
+\begin{enumerate}
+    \setcounter{enumi}{9}
+
+  \item Cross Product:\footnote{The vector created by $\overrightarrow{a}\text{ x }\overrightarrow{b}$ is orthogonal to both $\overrightarrow{a}$ and $\overrightarrow{b}$}
+    $$\overrightarrow{a}\text{ x }\overrightarrow{b}=\begin{vmatrix} \bold{\hat{i}} & \bold{\hat{j}} & \bold{\hat{k}}\\ a_1 & a_2 & a_3\\ b_1 & b_2 & b_3\\ \end{vmatrix}=\langle a_2b_3-a_3b_2, a_3b_1-a_1b_3,a_1b_2-a_2b_1\rangle$$
+
+  \item Cross Product Angle Formula:\footnote{If the cross product equals zero, the two vectors are parallel}
+    $$|\overrightarrow{a}\text{ x }\overrightarrow{b}|=|\overrightarrow{a}||\overrightarrow{b}|\sin\theta$$
+
+  \item Volume of the Parallelepiped created by vectors $\overrightarrow{a}$, $\overrightarrow{b}$, and $\overrightarrow{c}$:
+    $$V=|\overrightarrow{a}\cdot(\overrightarrow{b}\text{ x }\overrightarrow{c})|$$
+
+\end{enumerate}
+
+\subsection{Unit 5}
+
+\begin{enumerate}
+    \setcounter{enumi}{12}
+
+  \item Parametric line equations, given parallel vector $\langle a,b,c \rangle$, through point $(x_o,y_o,z_o)$:
+    $$x=x_o+at\,\,\,\,\,y=y_o+bt\,\,\,\,\,z=z_o+ct$$
+
+  \item Symmetric Equations:
+
+    $$t=\frac{x-x_o}{a}=\frac{y-y_o}{b}=\frac{z-z_o}{c}$$
+
+  \item Equation of a plane:
+
+    $$a(x-x_o)+b(y-y_o)+c(z-z_o)=0$$
+
+  \item Distance from plane to point $(x_1+y_1+z_1)$:
+    $$D=\frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}}$$
+\end{enumerate}
+
+\subsection{Unit 6}
+
+\begin{enumerate}
+    \setcounter{enumi}{16}
+
+  \item Quadric Surface Formulas:
+    \begin{center}
+\begin{tabular}{|p{.45\textwidth}||p{.45\textwidth}|}
+
+\hline
+  Figure & Equation \\
+\hline
+Ellipsoid: A Figure in Which All Traces are Ellipses & $\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$\\
+\hline
+  Cone: A Figure in Which Horizontal Traces are Ellipses and Vertical Traces in $x$ and $y$ are Hyperbolas & $\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z^2}{c^2}$\\
+\hline
+Elliptic Paraboloid: Horizontal Traces are Ellipses and Vertical Traces are Parabolas & $\frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}$\\ 
+\hline
+Hyperboloid of One Sheet: Horizontal Traces are Ellipses and Vertical Traces are Hyperbolas & $\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1$\\ 
+\hline
+Hyperbolic Paraboloid: Horizontal Traces are Hyperbolas and Vertical Traces are Parabolas & $\frac{x^2}{a^2}-\frac{y^2}{b^2}=\frac{z}{c}$\\
+\hline
+Hyperboloid of Two Sheets: Horizontal Traces are Ellipses in $z$ and Vertical Traces are Hyperbolas & $-\frac{x^2}{a^2}-\frac{y^2}{b^2}+\frac{z^2}{c^2}=1$\\
+\hline
+
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\section{Chapter 13}
+
+\subsection{Unit 1}
+
+\begin{enumerate}
+    \setcounter{enumi}{17}
+  \item Limit of a vector function:
+    $$\lim_{t\to a}\overrightarrow{r}(t)=\langle \lim_{t\to a}x(t), \lim_{t\to a} y(t), \lim_{t\to a}z(t)\rangle$$
+\end{enumerate}
+
+\subsection{Unit 2}
+
+\begin{enumerate}
+    \setcounter{enumi}{18}
+
+  \item Derivative of a vector function:
+    $$\frac{d}{dt}[\overrightarrow{r}(t)]=\langle x'(t), y'(t), z'(t)\rangle$$
+
+  \item Derivative of cross and dot products:
+
+    \begin{enumerate}
+
+      \item Dot Product:
+        $$\frac{d}{dt}[\overrightarrow{u}(t)\cdot\overrightarrow{v}(t)]=\overrightarrow{u}'(t)\cdot\overrightarrow{v}(t)+\overrightarrow{u}(t)\cdot\overrightarrow{v}'(t)$$
+
+      \item Cross Product:
+        $$\frac{d}{dt}[\overrightarrow{u}(t)\text{ x }\overrightarrow{v}(t)]=\overrightarrow{u}'(t)\text{ x }\overrightarrow{v}(t)+\overrightarrow{u}(t)\text{ x }\overrightarrow{v}'(t)$$
+
+    \end{enumerate}
+
+  \item Integral of a vector function:
+    $$\int_a^b \overrightarrow{r}(t)\,dt=\left(\int_a^b x(t)\,dt\right)\bold{\hat{i}}+\left(\int_a^by(t)\,dt\right)\bold{\hat{j}}+\left(\int_a^bz(t)\,dt\right)\bold{\hat{k}}$$
+\end{enumerate}
+
+\subsection{Unit 3}
+
+\begin{enumerate}
+    \setcounter{enumi}{21}
+
+  \item Arc Length of a parametric vector function:
+        $$L=\int_a^b\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2+\left(\frac{dz}{dt}\right)^2}\,dt=\int_a^b |\overrightarrow{r}'(t)|\,dt$$
+
+      \item Unit Tangent Vector:
+        $$\overrightarrow{T}(t)=\frac{\overrightarrow{r}'(t)}{|\overrightarrow{r}'(t)|}$$
+
+      \item Curvature:
+        \begin{enumerate}
+
+          \item Using the unit tangent vector:
+            $$\kappa(t)=\frac{|\overrightarrow{T}'(t)|}{|\overrightarrow{r}'(t)|}$$
+
+          \item Using first and second order derivatives:
+            $$\kappa(t)=\frac{|\overrightarrow{r}'(t)\text{ x }\overrightarrow{r}''(t)|}{|\overrightarrow{r}'(t)|^3}$$
+
+          \item For single variable functions:
+            $$\kappa(x)=\frac{|f''(x)|}{[1+(f'(x))^2]^{\frac{3}{2}}}$$
+
+        \end{enumerate}
+
+      \item Unit Normal Vector:
+        $$\overrightarrow{N}(t)=\frac{\overrightarrow{T}'(t)}{|\overrightarrow{T}'(t)|}$$
+
+      \item Binormal Vector:
+        $$\overrightarrow{B}(t)=\overrightarrow{T}(t)\text{ x }\overrightarrow{N}(t)$$
+    \end{enumerate}
+
+\subsection{Unit 4}
+
+\begin{enumerate}
+    \setcounter{enumi}{26}
+
+  \item Velocity:
+    $$\overrightarrow{v}(t)=\overrightarrow{r}'(t)$$
+
+  \item Speed:
+    $$|\overrightarrow{v}(t)|=|\overrightarrow{r}'(t)|$$
+
+  \item Acceleration:
+    $$\overrightarrow{a}(t)=\overrightarrow{v}'(t)=\overrightarrow{r}''(t)$$
+\end{enumerate}
+
+\section{Chapter 14}
+
+\subsection{Unit 1}
+
+\begin{enumerate}
+    \setcounter{enumi}{29}
+
+  \item Level curves are used to demonstrate the height of a function, by drawing a line where $f(x,y,z)=k$, where $k$ is any constant in the domain of $f$
+\end{enumerate}
+  
+\subsection{Unit 2}
+
+\begin{enumerate}
+    \setcounter{enumi}{30}
+
+  \item To evaluate a multivariable limit, one must evaluate it along different paths:
+    \textit{Example}
+    $$\lim_{(x,y)\to(0,0)}\frac{x}{y}$$
+      Evaluate along $y=mx$, which is any line through the origin
+      $$\lim_{(x,y)\to(0,0)}\frac{\cancel{x}}{m\cancel{x}}\Rightarrow\frac{1}{m}$$
+      Therefore, this limit does not exist because, for different slopes, the value is different
+
+\end{enumerate}
+
+\subsection{Unit 3}
+
+\begin{enumerate}
+    \setcounter{enumi}{31}
+
+  \item To find a partial derivative, hold all variables aside from the one being differentiated with respect to to find a partial derivative.
+
+\end{enumerate}
+
+\subsection{Unit 4}
+
+\begin{enumerate}
+    \setcounter{enumi}{32}
+
+  \item If $f$ has continuous partial derivatives, the following equation may be used to find a tangent plane:
+    $$z-z_o=f_x(x_o,y_o)(x-x_o)+f_y(x_o,y_o)(y-y_o)$$
+
+  \item Total differential:
+    $$dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy$$
+    Or, with a multivariable function:
+    $$df=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy+\frac{\partial f}{\partial z}dz$$
+
+\end{enumerate}
+
+\subsection{Unit 5}
+
+\begin{enumerate}
+    \setcounter{enumi}{34}
+
+  \item The Chain Rule (Where $x$ and $y$ are differentiable functions of $t$, $x(t)$ and $y(t)$ and $z=f(x(t),y(t)$):
+    $$\frac{dz}{dt}=\frac{\partial f}{\partial x}\frac{dx}{dt}+\frac{\partial f}{\partial y}\frac{dy}{dt}$$
+
+  \item The Chain Rule (Where $x$ and $y$ are differentiable functions of $(s,t)$, $x(s,t)$, and $y(s,t)$ and $z=f(x(s,t),y(s,t))$:
+      $$\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial s}\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\frac{\partial z}{\partial t}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial t}$$
+
+    \item Implicit differentiation:
+      $$\frac{dy}{dx}=-\frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial y}}=-\frac{F_x}{F_y}$$
+
+    \item Implicit Function Theorem:
+      $$\frac{\partial z}{\partial x}=-\frac{\frac{\partial F}{\partial x}}{\frac{\partial F}{\partial z}}\,\,\,\,\,\,\,\,\,\,\frac{\partial z}{\partial y}=-\frac{\frac{\partial F}{\partial y}}{\frac{\partial F}{\partial z}}$$
+
+\end{enumerate}
+
+\subsection{Unit 6}
+
+\begin{enumerate}
+    \setcounter{enumi}{38}
+
+  \item Directional derivative of function $f(x,y)$ in the direction of unit vector $u=\langle a,b \rangle$:
+    $$D_uf(x,y)=f_x(x,y)a+f_y(x,y)b$$
+    Or, in three dimensions:
+    $$D_uf(x,y,z)=f_x(x,y,z)a+f_y(x,y,z)b+f_z(x,y,z)c$$
+
+  \item Gradient Vector:
+    $$\nabla f(x,y) = \langle f_x(x,y),f_y(x,y) \rangle=\frac{\partial f}{\partial x}\bold{\hat{i}}+\frac{\partial f}{\partial y}\bold{\hat{j}}$$
+    Or, in three dimensions:
+    $$\nabla f(x,y,z) = \langle f_x(x,y),f_y(x,y) \rangle=\frac{\partial f}{\partial x}\bold{\hat{i}}+\frac{\partial f}{\partial y}\bold{\hat{j}}+\frac{\partial f}{\partial z}\bold{\hat{k}}$$
+
+  \item Tangent Multivariable Planes:
+    $$F_x(x_o,y_o,z_o)(x-x_o)+F_y(x_o,y_o,z_o)(y-y_o)+F_z(x_o,y_o,z_o)(z-z_o)=0$$
+
+
+\end{enumerate}
+
+\subsection{Unit 7}
+
+\begin{enumerate}
+    \setcounter{enumi}{41}
+
+  \item Second Derivative Test:
+    $$D(a,b)=f_{xx}(a,b)f_{yy}(a,b)-[f_{xy}(a,b)]^2$$
+    \begin{enumerate}
+
+      \item If $D > 0$ and $f_{xx}(a,b) > 0$, then $f(a,b)$ is a local minimum
+      \item If $D > 0$ and $f_{xx}(a,b) < 0$, then $f(a,b)$ is a local maximum
+      \item If $D < 0$, then $f(a,b)$ is not a local maximum or minimum
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\section{Chapter 15}
+
+\subsection{Unit 1}
+
+\begin{enumerate}
+    \setcounter{enumi}{42}
+
+  \item Double Integral over Rectangles:
+    Given rectangle $R=\{(x,y)\big| a\leq x\leq b, c\leq y\leq d\}$
+    The double integral of the function $f(x,y)$ is:
+    $$\iint_R f(x,y)\,dA=\int_a^b\int_c^df(x,y)\,dy\,dx$$
+    This yields the volume of the shape under the function $f(x,y)$ and above rectangle, $R$
+
+  \item Midpoint Rule for Double integrals:
+    $$\int_R f(x,y)\,dA\approx\sum_{i=1}^m\sum_{j=1}^nf(\bar{x}_i,\bar{y}_i)\,\Delta A$$
+
+\end{enumerate}
+
+\subsection{Unit 2}
+
+\begin{enumerate}
+    \setcounter{enumi}{44}
+
+  \item Type I Region ($D=\{(x,y)\big|a\leq x\leq b, g_1(x)\leq y\leq g_2(x)$):
+      $$\int_a^b\int_{g_1(x)}^{g_2(x)}f(x,y)\,dy\,dx$$
+
+    \item Type II Region ($D=\{(x,y)\big|h_1(y)\leq x\leq h_2(y), c \leq y\leq d$):
+      $$\int_c^d\int_{h_1(y)}^{h_2(y)}f(x,y)\,dx\,dy$$
+
+\end{enumerate}
+
+\subsection{Unit 3}
+
+\begin{enumerate}
+    \setcounter{enumi}{46}
+
+  \item Change to Polar Coordinates:
+    $$\int_{\alpha}^{\beta}\int_a^b f(r\cos\theta,r\sin\theta)r\,dr\,d\theta$$
+
+  \item Polar bounded by function(s) ($D=\{(r,\theta)\big|\alpha\leq\theta\leq\beta, h_1(\theta)\leq r\leq h_2(\theta)\}$):
+    $$\int_{\alpha}^{\beta}\int_{h_1(\theta)}^{h_2(\theta)} f(r\cos\theta,r\sin\theta)r\,dr\,d\theta$$
+
+\end{enumerate}
+
+\subsection{Unit 4}
+
+\begin{enumerate}
+    \setcounter{enumi}{48}
+
+  \item Mass from density function:
+    $$m=\iint_D \rho(x,y)\,dA$$
+
+  \item Moment about the:
+
+    \begin{enumerate}
+
+      \item $x$ axis:
+        $$M_x=\iint_D y\rho(x,y)\,dA$$
+
+      \item $y$ axis:
+        $$M_y=\iint_D x\rho(x,y)\,dA$$
+
+    \end{enumerate}
+
+  \item Center of mass:
+
+    $$\bar{x}=\frac{M_y}{m}\,\,\,\,\,\,\,\,\,\,\bar{y}=\frac{M_x}{m}$$
+
+  \item Moment of Inertia about the:
+
+    \begin{enumerate}
+
+      \item $x$ axis:
+        $$I_x=\iint_D y^2\rho(x,y)\,dA$$
+
+      \item $y$ axis:
+        $$I_y=\iint_D x^2\rho(x,y)\,dA$$
+
+      \item Origin (Polar):
+        $$I_o=\iint_D (x^2+y^2)\rho(x,y)\,dA$$
+
+    \end{enumerate}
+
+\end{enumerate}
+
+\subsection{Unit 5}
+
+\begin{enumerate}
+    \setcounter{enumi}{52}
+
+  \item Surface Area:
+    $$\iint_D \sqrt{[f_x(x,y)]^2+[f_y(x,y)]^2+1}\,dA$$
+
+\end{enumerate}
+
+\subsection{Unit 6}
+
+\begin{enumerate}
+    \setcounter{enumi}{53}
+
+  \item Triple Integral on Box ($B=\{(x,y,z)\big|a\leq x\leq b, c\leq y\leq d, r\leq z\leq s\}$):
+    $$\int_a^b\int_c^d\int_r^sf(x,y,z)\,dx\,dy\,dz$$
+
+  \item Type I $E$ ($E=\{(x,y,z)\big|(x,y)\in D, u_1(x,y)\leq z\leq u_2(x,y)\}$): 
+    $$\iint_D \left[\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)\,dz\right]\,dA$$
+
+  \item Type I $D$ and $E$ ($E=\{(x,y,z)\big| a\leq x\leq b, g_1(x)\leq y\leq g_2(x), u_1(x,y)\leq z\leq u_2(x,y)\}$): 
+    $$\int_a^b\int_{g_1(x)}^{g_2(x)}\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)\,dz\,dy\,dx$$
+
+  \item Type II $D$ and Type I $E$ ($E=\{(x,y,z)\big| h_1(y)\leq x\leq h_2(y), c\leq y\leq d, u_1(x,y)\leq z\leq u_2(x,y)\}$): 
+    $$\int_c^d\int_{h_1(y)}^{h_2(y)}\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)\,dz\,dx\,dy$$
+
+  \item Type II $E$ ($E=\{(x,y,z)\big|u_1(y,z)\leq x\leq u_2(y,z), c\leq y\leq d,r\leq z\leq s\}$)
+    $$\iint_D \left[\int_{u_1(y,z)}^{u_2(y,z)} f(x,y,z)\,dx\right]\,dA$$
+
+  \item Type III $E$ ($E=\{(x,y,z)\big|a\leq x\leq b, u_1(x,z)\leq y\leq u_2(x,z), r\leq z\leq s\}$)
+    $$\iint_D\left[\int_{u_1(x,z)}^{u_2(x,z)}f(x,y,z)\,dy\right]\,dA$$
+
+\end{enumerate}
+
+\subsection{Unit 7 (Skip)}
+
+\subsection{Unit 8 (Skip)}
+
+\subsection{Unit 9}
+
+\begin{enumerate}
+    \setcounter{enumi}{59}
+
+  \item The Jacobian Transformation:
+    $$J=\Large{\begin{vmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} \\ \end{vmatrix}}=\frac{\partial x}{\partial u}\frac{\partial y}{\partial v}-\frac{\partial x}{\partial v}\frac{\partial y}{\partial u}$$
+
+  \item Change of Variables in Double Integrals
+    $$\iint_S f(x(u,v),y(u,v)) J\,du\,dv$$
+
+\end{enumerate}
+
+\section{Chapter 16}
+
+\subsection{Unit 1}
+
+\begin{enumerate}
+    \setcounter{enumi}{61}
+
+  \item Gradient vector fields:
+    $$\nabla f(x,y,z)=f_x(x,y,z)\bold{\hat{i}}+f_y(x,y,z)\bold{\hat{j}}+f_z(x,y,z)\bold{\hat{k}}$$
+
+\end{enumerate}
+
+\subsection{Unit 2}
+
+\begin{enumerate}
+    \setcounter{enumi}{62}
+
+  \item Line Integrals:
+    $$\int_C f(x,y,z)\,ds=\int_C f(x,y,z)\sqrt{\left(\frac{\partial f}{\partial x}\right)^2+\left(\frac{\partial f}{\partial y}\right)^2+\left(\frac{\partial f}{\partial z}\right)^2}\,dt$$
+
+\end{enumerate}
+
+\subsection{Unit 3}
+
+\begin{enumerate}
+    \setcounter{enumi}{63}
+
+  \item Fundamental Theorem of Line Integrals
+    $$\int_C \bold{F}\,d\bold{r}=\int_C \nabla f\,d\bold{r}=f(\bold{r}(b))-f(\bold{r}(a))$$
+
+  \item Conservative Vector Field If:
+    $$\frac{\partial P}{\partial y}=\frac{\partial Q}{\partial x}$$
+
+\end{enumerate}
+
+\subsection{Unit 4}
+
+\begin{enumerate}
+    \setcounter{enumi}{65}
+
+  \item Green's Theorem:
+    $$\int_C P\,dx+Q\,dy=\iint_D \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\,dA$$
+
+\end{enumerate}
+
+
+\end{document}
+
+
